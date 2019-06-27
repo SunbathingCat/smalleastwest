@@ -4,17 +4,23 @@ from email.mime.application import MIMEApplication
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText  # 发送正文只包含简单文本的邮件，引入MIMEText即可
 
+# 先设置这三项
+Sender = '3014957624@qq.com'
+Username = '3014957624@qq.com'
+Password = '一个授权码字符串，不是登录密码'
+
+
 def SendToOther(targit,title,body):
     # 发件人和收件人
-    sender = '3014957624@qq.com'
+    sender = Sender
     receiver = targit
 
     # 所使用的用来发送邮件的SMTP服务器
     smtpServer = 'smtp.qq.com'
 
     # 发送邮箱的用户名和授权码（不是登录邮箱的密码）
-    username = '3014957624@qq.com'
-    password = 'gxkuljkbyxjgdcig'
+    username = Username
+    password = Password
 
     mail_title = title
     mail_body = body
@@ -36,15 +42,15 @@ def SendToOther(targit,title,body):
         return 0
 def SendToMe(title,body):
     # 发件人和收件人
-    sender = '3014957624@qq.com'
-    receiver = '3014957624@qq.com'
+    sender = Sender
+    receiver = Sender
 
     # 所使用的用来发送邮件的SMTP服务器
     smtpServer = 'smtp.qq.com'
 
     # 发送邮箱的用户名和授权码（不是登录邮箱的密码）
-    username = '3014957624@qq.com'
-    password = 'gxkuljkbyxjgdcig'
+    username = Username
+    password = Password
 
     mail_title = title
     mail_body = body
@@ -66,15 +72,15 @@ def SendToMe(title,body):
         return 0
 def SendZipToOther(targit,title,body,zip):
     # 发件人和收件人
-    sender = '3014957624@qq.com'
+    sender = Sender
     receiver = targit
 
     # 所使用的用来发送邮件的SMTP服务器
     smtpServer = 'smtp.qq.com'
 
     # 发送邮箱的用户名和授权码（不是登录邮箱的密码）
-    username = '3014957624@qq.com'
-    password = 'gxkuljkbyxjgdcig'
+    username = Username
+    password = Password
 
     mail_title = title
     textApart = MIMEText(body)
