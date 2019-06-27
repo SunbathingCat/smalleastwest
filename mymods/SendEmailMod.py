@@ -4,10 +4,10 @@ from email.mime.application import MIMEApplication
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText  # 发送正文只包含简单文本的邮件，引入MIMEText即可
 
-# 先设置这三项
-Sender = '3014957624@qq.com'
-Username = '3014957624@qq.com'
-Password = '一个授权码字符串，不是登录密码'
+# 设置完这三项即可使用该模块
+Sender = '3014957624@qq.com'    # 发件人
+Username = '3014957624@qq.com'  # 最好和发件人一样
+Password = '一个授权码字符串，不是登录密码'    # 打开smtp服务时得到的授权码
 
 
 def SendToOther(targit,title,body):
