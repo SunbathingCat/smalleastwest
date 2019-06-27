@@ -56,7 +56,7 @@ def ranfun(typ):
         print("字符串组成类型有误，已生成默认格式字符串，")
         return optna[random.randint(0, 1)]
 
-
+# 调用此函数以获得所需的字符串
 def randstr(long=10,type='sz',num=1):
     '''
     生成指定长度，组成类型若干数量的随机字符串
