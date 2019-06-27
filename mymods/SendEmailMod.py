@@ -7,9 +7,9 @@ from email.mime.text import MIMEText  # 发送正文只包含简单文本的邮�
 # 设置完这三项即可使用该模块
 Sender = '3014957624@qq.com'    # 发件人
 Username = '3014957624@qq.com'  # 最好和发件人一样
-Password = '一个授权码字符串，不是登录密码'    # 打开smtp服务时得到的授权码
+Password = '一个授权码字符串，不是登录密码'    # 打开邮箱smtp服务时得到的授权码
 
-
+# 发送邮件给其他人
 def SendToOther(targit,title,body):
     # 发件人和收件人
     sender = Sender
@@ -40,6 +40,10 @@ def SendToOther(targit,title,body):
         return 1
     except smtplib.SMTPException:
         return 0
+    
+    
+  
+# 发送邮件给自己
 def SendToMe(title,body):
     # 发件人和收件人
     sender = Sender
@@ -70,6 +74,9 @@ def SendToMe(title,body):
         return 1
     except smtplib.SMTPException:
         return 0
+    
+    
+# 发送带压缩包的邮件给别人
 def SendZipToOther(targit,title,body,zip):
     # 发件人和收件人
     sender = Sender
