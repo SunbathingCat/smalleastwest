@@ -11,6 +11,7 @@ def than(num):
 def than2(alp):
     return ord(alp)-64
 
+# 生成激活码
 def Generate():
     list1 = [1,2,3,4]
     list2 = [5,6,7,8]
@@ -57,6 +58,7 @@ def Generate():
     print(string)
     return string
 
+# 校验激活码
 def Distinguish(str):
     string = str.split('-')
     string1 = string[0]
